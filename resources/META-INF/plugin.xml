@@ -1,0 +1,40 @@
+<idea-plugin>
+  <id>com.theodo.nest.plugin.sqli</id>
+  <name>Theodo Nest TypeORM</name>
+  <version>1.0</version>
+  <vendor email="guillaumem@theodo.fr" url="http://www.theodo.fr">Theodo</vendor>
+
+  <description><![CDATA[
+      Plugin to detect SQL Injections in Nest TypeORM<br>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Nov. 16th 2019, First version of the plugin.
+    ]]>
+  </change-notes>
+
+  <depends>com.intellij.modules.platform</depends>
+  <depends>JavaScript</depends>
+  <depends>com.intellij.modules.xml</depends>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <!-- uncomment to enable plugin in all products
+  <depends>com.intellij.modules.lang</depends>
+  -->
+
+  <extensions defaultExtensionNs="com.jetbrains.javascript">
+      <!-- Add your extensions here -->
+  </extensions>
+  <extensions defaultExtensionNs="com.intellij">
+    <localInspection implementationClass="com.theodo.js.plugins.inspection.TypeOrmInspection"/>
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+  </actions>
+
+</idea-plugin>
