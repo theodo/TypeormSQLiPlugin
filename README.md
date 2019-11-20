@@ -30,6 +30,10 @@
 
         const tokens = ['A VALUE', 'ANOTHER VALUE', externalVariable]
         this.connection.query('SELECT XYZ, ABC FROM A WHERE ABC = ' + tokens[2]);
+
+        // ==> PREFERE THAT:
+        this.connection.query(`SELECT XYZ, ABC FROM A WHERE ABC = $1`, [aValue]);
+
     }
 ```
 

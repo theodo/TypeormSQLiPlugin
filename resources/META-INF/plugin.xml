@@ -5,7 +5,24 @@
   <vendor email="guillaumem@theodo.fr" url="http://www.theodo.fr">Theodo</vendor>
 
   <description><![CDATA[
-      Plugin to detect SQL Injections in Nest TypeORM<br>
+<html>
+<body>
+<h3>Plugin to highlight suspicious code about SQL Injections in Nest 'TypeORM'</h3><br>
+It detects calls to <b>Connection.query(...)</b> methods where the 'query' parameter seems to be non constant.<br>
+It detects calls to <b>SelectQueryBuilder methods where 'query'</b> parameter seems to be non constant.<br>
+It detects calls to <b>SelectQueryBuilder methods where 'where'</b> parameter seems to be non constant.<br>
+It detects calls to <b>SelectQueryBuilder methods where 'condition'</b> parameter seems to be non constant.<br>
+<br>
+In all case, the <b>solution</b> is to use parameters instead.<br><br>
+<h3>Example:</h3>
+Instead of:
+<pre><code>this.connection.query(`SELECT XYZ, ABC FROM A WHERE ABC = ${aValue}`);</code></pre><br>
+Use this:
+<pre><code>this.connection.query(`SELECT XYZ, ABC FROM A WHERE ABC = $1`, [aValue]);</code></pre><br>
+</p>
+<!-- tooltip end -->
+</body>
+</html>
     ]]></description>
 
   <change-notes><![CDATA[
