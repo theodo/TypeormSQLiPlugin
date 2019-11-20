@@ -1,3 +1,10 @@
+SQL Injection pattern detection in NodeJS + TypeORM
+
+Plugin for WEBSTORM IDE
+
+This plugin highlights suspicious code that may lead to SQL injection when using TypeORM.
+See: https://www.owasp.org/index.php/SQL_Injection
+
 #### Typeorm Connection.query(...) samples:
 ###### no Problem highlighted:
 ``` javascript
