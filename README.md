@@ -1,4 +1,4 @@
-SQL Injection pattern detection in NodeJS + TypeORM
+### SQL Injection pattern detection in NodeJS + TypeORM ###
 
 Plugin for WEBSTORM IDE
 
